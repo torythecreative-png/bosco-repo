@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin:0%;
+    padding:0%;
+}
+.navigation{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background: goldenrod;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.logo{ font-weight: bold; font-size: 1.2rem;color: brown;
+}
+.nav-links{
+    display:flex;
+    gap: 1.5rem;
+}
+.nav-links a{
+    text-decoration:none;
+    color: darkred;
+    font-size: 0.95rem;
+}
+.nav-links a:hover{
+    color: beige;
+}
+/* hide mobile button by default on desktop */
+
+.menu-top {
+    display: none;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: beige;
+}
+
+.menu-top:hover {
+    color: darkred;
+    background-color: beige;
+}
+
+/* Responsiveness styles for mobile screens */
+@media (max-width:768px){
+    .menu-top{display: flex;}
+
+    .nav-links{
+        display: none;
+        position:absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        background: burlywood;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        gap: 1rem;
+        text-align: center;
+    }
+    .nav-links.active {
+        display:flex
+    }
+}
